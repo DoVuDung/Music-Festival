@@ -254,7 +254,7 @@ html {
     ,50% cua chinh no */
     /* background-image: co kha nang do nen anh tu lop padding  */
     /* background: background-image __ background-position __ background-size __background-repeat  */
-    background: url(../image/pexels-thibault-trillet-167491.jpg) top center / cover no-repeat;
+    background: url(https://dovudung.github.io/music-festival/assests/image/pexels-thibault-trillet-167491.jpg) top center / cover no-repeat;
 }
 
 #slider .text-content {

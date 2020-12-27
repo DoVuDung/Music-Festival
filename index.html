@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Festival</title>
+    <!-- icon cua trang -->
+    <link rel="icon" href="./assests/image/icons8-add-song-64.png">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="./assests/fonts/themify-icons-font/themify-icons/themify-icons.css">
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <!-- begin nav -->
+            <ul id="nav">
+                <li><a href="#">home</a></li>
+                <li> <a href="#band">band</a> </li>
+                <li> <a href="#tour">tour</a> </li>
+                <li> <a href="#contact">contact</a> </li>
+                <li> <a href="#">more 
+                    <i class="nav-arrow-down ti-angle-down"></i>
+                </a>
+                    <ul class="subnav">
+                        <li><a href="#">Merchandise</a></li>
+                        <li><a href="#">Extras</a></li>
+                        <li><a href="#">Media</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- end nav -->
+            <!--begin: btn search -->
+            <div class="search-btn">
+                <i class="search-icon ti-search"></i>
+            </div>
+            <!--end: btn search -->
+
+        </div>
+        <!-- Begin: slider -->
+        <div id="slider">
+            <div class="text-content">
+                <h2 class="text-heading">New York</h2>
+                <div class="text-decription">
+                    The atmosphere in New York is lorem ipsum.
+                </div>
+            </div>
+        </div>
+        <!-- End: slider -->
+        <!-- begin: Content -->
+        <div id="content">
+            <!-- Dung chung class -->
+            <!-- About section -->
+            <div id="band" class="content-section">
+                <!-- Dung lai -->
+                <h2 class="section-heading">The Band</h2>
+                <p class="section-sub-heading">We love music</p>
+                <!-- Cac section tren la dung chung lai -->
+                <p class="about-text">We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+                    id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <!-- Member -->
+                <div class="member-list">
+                    <!-- Do the div co tinh chat mac dich la block cho nen moi phan tu con se 
+                    nam rieng tren mot dong -->
+                    <div class="member-item">
+                        <p class="member-name">Luis</p>
+                        <img src="./assests/image/1.jpeg" alt="Luis" class="member-img">
+                    </div>
+                    <div class="member-item">
+                        <p class="member-name">Rose</p>
+                        <img src="./assests/image/2.jpeg" alt="Rose" class="member-img">
+                    </div>
+                    <div class="member-item">
+                        <p class="member-name">Canon</p>
+                        <img src="./assests/image/3.jpeg" alt="Canon" class="member-img">
+                    </div>
+                    <!-- dung clear cho float, tao ra mot class moi, dat phia ben duoi cung cua class gap loi -->
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <!-- Tour dates -->
+            <!-- vấn đề gặp phải lúc này là background chỉ đổ được màu cho padding và content, ý tưởng 
+            là tạo ra một div cha  -->
+            <div id="tour" class="tour-section">
+                <div class="content-section">
+                    <!-- Dung lai -->
+                    <!-- Thêm class có màu chữ bằng white: class: text-white -->
+                    <h2 class="section-heading text-white">TOUR DATES</h2>
+                    <p class="section-sub-heading text-white">Remember to book your tickets! </p>
+                    <ul class="ticket-list">
+                        <li>September <span class="sold-out">Sold out</span></li>
+                        <li>October <span class="sold-out">Sold out</span></li>
+                        <li>November <span class="quantity">3</span></li>
+                    </ul>
+                    <!-- Places -->
+                    <div class="row place-list">
+                        <div class="column-third column place-item">
+                            <img src="./assests/image/newyork.jpg" alt="New York" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">New York</h3>
+                                <p class="place-time">Fri 27 Nov 2016</p>
+                                <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="column-third column place-item">
+                            <img src="./assests/image/paris.jpg" alt="Paris" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">Paris</h3>
+                                <p class="place-time">Sat 28 Nov 2016</p>
+                                <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+
+                        <div class="column-third column place-item">
+                            <img src="./assests/image/san.jpg" alt="San Francisco" class="place-img">
+                            <div class="place-body">
+                                <h3 class="place-heading">San Francisco</h3>
+                                <p class="place-time">Sun 29 Nov 2016</p>
+                                <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                            </div>
+                        </div>
+                        <!-- Kỹ thuật clear -->
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+            <!--begin: Contact -->
+            <div id="contact" class="content-section">
+                <!-- Dung lai -->
+                <h2 class="section-heading">CONTACT</h2>
+                <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="row contact-content">
+                    <div class="column column-half contact-info">
+                        <p><i class="ti-location-pin"></i>Chicago, US</p>
+                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                    </div>
+                    <div class="column column-half contact-form">
+                        <form action="">
+                            <div class="row ">
+                                <div class="column column-half">
+                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                </div>
+
+                                <div class="column column-half">
+                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                </div>
+                                <!-- Element row:after sẽ thêm vào đây -->
+                            </div>
+                            <div class="row margin-top-8">
+                                <div class="column column-full">
+                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                </div>
+                            </div>
+                            <input class="form-submit-btn margin-top-16" type="submit" value="SEND">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End: contact -->
+            <div class="map-section">
+                <img src="./assests/image/fo.jpg" alt="map">
+            </div>
+        </div>
+        <!-- end: Content -->
+        <div id="footer">
+            <div class="social-list">
+                <a href="#"><i class="ti-facebook"></i></a>
+                <a href="#"><i class="ti-instagram"></i></a>
+                <a href="#"><i class="ti-youtube"></i></a>
+                <a href="#"><i class="ti-skype"></i></a>
+                <a href="#"><i class="ti-twitter"></i></a>
+                <a href="#"><i class="ti-vimeo-alt"></i></a>
+            </div>
+            <p class="copy-right">Powered by
+                <a href="">Andy Do</a>
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>

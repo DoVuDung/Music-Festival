@@ -1,0 +1,607 @@
+/* Reset css */
+
+
+/* 
+1.Tu ngoai vao trong
+2.Tu tren xuong duoi
+3.Tong quan den chi tiet
+*/
+
+
+/* 
+1.Vi tri
+2.Kich thuoc(width, height)
+3.Mau sac
+4.Kieu dang( kieu chu, hinh tron, vuong, ...)
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* giúp cho trang mượt hơn */
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Common */
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+
+/* mục đích là sử dụng lại */
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+
+/* nếu sử dụng thằng này thì không cần sử dụng class clear nữa, nó sẽ tự thêm element giả */
+
+.row::after {
+    content: "";
+    display: block;
+    /* display bắt buộc phải có thì clear mới hoạt động */
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.column-third {
+    width: 33.33333%;
+}
+
+.column-half {
+    width: 50%;
+}
+
+.column-full {
+    width: 100%;
+}
+
+
+/* Nguyên tắc thiết kế là sử dụng số chia hết cho 4 */
+
+.margin-top-8 {
+    margin-top: 8px !important;
+}
+
+.margin-top-16 {
+    margin-top: 16px !important;
+}
+
+
+/* ----------------- */
+
+#main {}
+
+#header {
+    /* fixed nav, noi len vi tri cao hon, header dang de len slider */
+    position: fixed;
+    /* khi co position thi tinh chat khoi cua block khong con nua */
+    top: 0;
+    /* top:0 dam bao top luon nam dung vi tri */
+    left: 0;
+    right: 0;
+    /* co dinh header, va header noi len tren */
+    height: 46px;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+    z-index: 1;
+}
+
+
+/* cho nav bang dung chieu ngang cua no */
+
+#nav {
+    display: inline-block;
+}
+
+#nav,
+.subnav {
+    /* trong truong hop xuat hien dau cham tai 
+    menu cap 2 thi phai ap dung thuoc tinh len ul */
+    list-style-type: none;
+}
+
+
+/* cho cac thanh phan header len 1 hang */
+
+
+/* lam cho chieu ngang cua menu cap 2  */
+
+#nav>li {
+    display: inline-block;
+}
+
+#nav li {
+    /* ap dung the cha, doi voi subnav */
+    position: relative;
+}
+
+
+/* tach hai truong hop */
+
+#nav>li>a {
+    /* chi tac dong len thuoc tinh the a cap 1 */
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/* tat ca thuoc tinh a cua li cua id #nav se bi anh huong thuoc tinh tren */
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    /* text-transform: uppercase; */
+    /* cho background-color cua a chuyen sang mau xam, loai bo ve tinh toan kich thuoc doi voi a */
+    display: block;
+    /* voi display: block cac thuoc tinh con se ke thua chieu ngang cua the cha */
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+
+/* chi tac dong len the cap 1 */
+
+#nav>li:hover>a {
+    color: #000;
+    background-color: #fff
+}
+
+#nav .subnav li:hover a {
+    /* css rieng cho cap 2 */
+    color: #000;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+}
+
+
+/* doi mau background cac items */
+
+
+/* khi hover vao the li, thi tat ca cac the con cua li bi ap dung thuoc tinh tren */
+
+
+/* khong can dung cho nay */
+
+
+/* #nav li:hover a {
+    color: #000;
+    background-color: #ccc;
+} */
+
+#nav .subnav {
+    min-width: 160px;
+    display: none;
+    top: 100%;
+    left: 0;
+    /* bang dung kich thuoc cua the cha */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav .subnav a {
+    color: #000;
+    /* lam mong khoan cach cua menu cap 2 */
+    padding: 0 12px;
+    /* dung nguyen tac thiet ke chia het cho 4 gridsystem: 4px */
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .search-btn {
+    /* Khi mot the div co tinh chat khoi la ke thua chieu ngang,
+    ma them thuoc tinh float vao thi se lam mat thuoc tinh chieu ngang cua no */
+    float: right;
+    padding: 0 21px;
+}
+
+
+/* khi hover thì đổi màu background của btn-search */
+
+#header .search-btn:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+/* chuyển màu của icon sang màu đen */
+
+#header .search-btn:hover .search-icon {
+    color: #000;
+}
+
+#header .search-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+}
+
+
+/* phan slider */
+
+#slider {
+    /* dat vi tri co slider co truc toa do la goc tren ben trai */
+    position: relative;
+    margin-top: 46px;
+    /* tao ra khoan cach */
+    padding-top: 50%;
+    /* kich thuoc luon dung ti le cua buc anh
+    ,50% cua chinh no */
+    /* background-image: co kha nang do nen anh tu lop padding  */
+    /* background: background-image __ background-position __ background-size __background-repeat  */
+    background: url(/assests/image/pexels-thibault-trillet-167491.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    /* day phan nay nam ngoai background-image */
+    bottom: 48px;
+    /* cho vi tri cua decription nam tro lai background-image */
+    color: #fff;
+    /* can giua item, truong hop dang su dung position */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* tim hieu ve cho nay doi voi thuoc tinh transfrom */
+    text-align: center;
+    /* width: 100%; */
+    right: 0;
+    left: 0;
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+
+/* loi header ko conf position:fixed */
+
+
+/* giai thich: khi them position thi cai doi tuong position fixed se bi noi len hoac chim xuong
+, su dung z-index de sua loi nay*/
+
+#slider .text-decription {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+#content {}
+
+#content .content-section {
+    width: 800px;
+    padding: 64px 0;
+    /* can giua */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    /* can giua */
+    text-align: center;
+    /* gian cach cac chu */
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    /* can giua */
+    text-align: center;
+    margin-top: 25px;
+    /* chu nghieng */
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    /* can le hai ben  */
+    text-align: justify;
+    /* line-height: +En: 1.4  or +VN: 1.6 */
+    line-height: 1.4;
+}
+
+#content .member-list {
+    margin-top: 48px;
+    /* day "tour date ve dung vi tri mong muon" */
+    overflow: hidden;
+    /*?*/
+}
+
+#content .member-item {
+    /* cho 3 anh len 1 hang */
+    float: left;
+    /* dac diem khi dung float, khi cac the con ben trong dung float, thi kich thuoc cua the cha se bi co lai */
+    width: 33.33333%;
+    /* canh giua tat ca cac thuoc tinh cua the con */
+    text-align: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#content .member-img {
+    /* xet chieu rong cua anh */
+    width: 154px;
+    /* doi voi the img, neu da dat width thi khong can dat height, tu 
+    dong ty le dung kich thuoc*/
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+
+/* Tour section */
+
+.tour-section {
+    /* background: rgb(226, 106, 14); */
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+}
+
+.ticket-list {
+    margin-top: 40px;
+    list-style: none;
+    background-color: #fff;
+}
+
+
+/* css riêng cho li */
+
+.ticket-list li {
+    color: #757575;
+    /* nên xét font-size đầu tiên */
+    font-size: 15px;
+    padding: 11px 16px;
+    /* tạo đường gạch chân */
+    border-bottom: 1px solid #ddd;
+}
+
+.ticket-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.ticket-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #000;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    /* hình bị lệch xuống dưới, li do: chiều cao cao hơn content */
+    /* đứng giữa, phải dùng với float */
+    margin-top: -3px;
+    /* khi có thuộc tính inline mà thêm float vào thì thuộc tính thẻ đó chuyển sang block (display:block;)
+    khi thuộc tính đã có tính chất block thì sẽ đạt được width vs height*/
+    /* LƯU Ý: có float thì mới dùng margin âm được  */
+}
+
+
+/* Place */
+
+.place-list {
+    /* cách phần tử ở trên là 32px */
+    margin-top: 32px;
+    /* margin-left: -8px;
+    margin-right: -8px; */
+    /* margin: 32px -8px 48px; */
+    /* padding-bottom: 48px; */
+    margin-bottom: 48px;
+}
+
+.place-item {
+    /* cho tất cả các ảnh lên 1 hàng */
+    /* float: left; */
+    /* xét kích thước các ảnh với chiều ngang bằng 100% / 3 */
+    /* width: 33.33333%; Đã lấy ở phía trên Common */
+    /* padding vao anh */
+    /* Chỗ này sẽ bị trường hợp là ảnh không được ôm hết vào thẻ chứa nó, 
+    sử dụng kỹ thuật clear*/
+}
+
+
+/* xuất hiện vấn đề đối với các mép ảnh là không bằng nhau, do thuộc tính padding ở trên */
+
+
+/* kỹ thuật làm cho hai đầu mép ảnh bằng ra ngoài, sử dụng kỹ thuật padding và margin âm, đang sử dụng trong bootstrap*/
+
+.place-img {
+    /* Cho ảnh nằm gọn trong thẻ chứa nó */
+    width: 100%;
+    /* đối với trường hợp là mô hình khối không hề bị bất kì tác động nào, thì chắc chắn là do thẻ display: inline mặc định là nó có khoản cách như vậy */
+    /* lỗi tiếp theo xuất hiện khoản đen giữa ảnh và phần body, lí do là ảnh có display: inline - sửa lại là block  */
+    display: block;
+    height: 338px;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background: #fff;
+    padding: 16px;
+    /* các thẻ con chứa thuộc tính font-size: ; thì có tính chất kế thừa, nên chúng ta chỉ cần css lên thẻ cha là các thẻ con sẽ css theo */
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    margin-top: 15px;
+    columns: #757575;
+}
+
+.place-decription {
+    margin-top: 15px;
+    /* EN: 1.4, VN: 1.6 */
+    line-height: 1.4;
+}
+
+
+/* LƯU Ý: inline nằm bên dưới block, tính chất là inline nếu được padding lên thì khoản padding sẽ nằm đè (không được va chạm với 
+thằng bên trên), cách xử lí là display: inline-block*/
+
+.place-buy-btn {
+    color: rgb(232, 21, 147);
+    background-color: rgb(247, 239, 15);
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border-radius: 4px;
+}
+
+.place-buy-btn:hover {
+    color: #000;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(315deg, #FFFFFF 0%, #6284FF 50%, #FF0000 100%);
+}
+
+
+/* CONTACT form */
+
+
+/* contact-content */
+
+.contact-content {
+    margin-top: 48px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+
+/* lấy tất cả các class bắt đầu với ti- */
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+
+/* căn giữa mép chữ trong ô input */
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* cho chiều rộng  */
+    width: 100%;
+    /* vấn đề là hai row bị dính vào nhau, cách giải quyết, dùng clear, dùng sudo element 
+    , dùng before after*/
+    outline: none;
+}
+
+
+/* form-submit-btn */
+
+.contact-form .form-submit-btn {
+    background: #FF8008;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFC837, #FF8008);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFC837, #FF8008);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px 16px;
+    float: right;
+    border-radius: 4px;
+}
+
+.contact-form .form-submit-btn:hover {
+    background: #DD5E89;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F7BB97, #DD5E89);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #000;
+    cursor: pointer;
+}
+
+
+/* xử lí bấm vào hiện outline màu khác */
+
+
+/* END: CONTACT */
+
+
+/* Footer section */
+
+
+/* map-section */
+
+.map-section img {
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px;
+}
+
+#footer .social-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .copy-right a:hover,
+#footer .social-list a :hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copy-right {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
+}

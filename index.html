@@ -8,6 +8,8 @@
     <!-- icon cua trang -->
     <link rel="icon" href="./assests/image/icons8-add-song-64.png">
     <link rel="stylesheet" href="./assests/css/style.css">
+    <!-- css uu tien viet o ben duoi -->
+    <link rel="stylesheet" href="./assests/css/responsive.css">
     <link rel="stylesheet" href="./assests/fonts/themify-icons-font/themify-icons/themify-icons.css">
 
 </head>
@@ -32,11 +34,20 @@
                 </li>
             </ul>
             <!-- end nav -->
+
+            <!-- begin: menu icon -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
+            <!-- end: menu icon -->
+
             <!--begin: btn search -->
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
             <!--end: btn search -->
+
+
 
         </div>
         <!-- Begin: slider -->
@@ -66,15 +77,15 @@
                     <!-- Do the div co tinh chat mac dich la block cho nen moi phan tu con se 
                     nam rieng tren mot dong -->
                     <div class="member-item">
-                        <p class="member-name">Luis</p>
+                        <p class=" member-item-mobile member-name">Luis</p>
                         <img src="./assests/image/1.jpeg" alt="Luis" class="member-img">
                     </div>
                     <div class="member-item">
-                        <p class="member-name">Rose</p>
+                        <p class="member-item-mobile  member-name">Rose</p>
                         <img src="./assests/image/2.jpeg" alt="Rose" class="member-img">
                     </div>
                     <div class="member-item">
-                        <p class="member-name">Canon</p>
+                        <p class="member-item-mobile  member-name">Canon</p>
                         <img src="./assests/image/3.jpeg" alt="Canon" class="member-img">
                     </div>
                     <!-- dung clear cho float, tao ra mot class moi, dat phia ben duoi cung cua class gap loi -->
@@ -97,33 +108,33 @@
                     </ul>
                     <!-- Places -->
                     <div class="row place-list">
-                        <div class="column-third column place-item">
+                        <div class="column-third margin-top-32 s-col-full column place-item">
                             <img src="./assests/image/newyork.jpg" alt="New York" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <a href="#" class="place-buy-btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
 
-                        <div class="column-third column place-item">
+                        <div class="column-third margin-top-32 s-col-full column place-item">
                             <img src="./assests/image/paris.jpg" alt="Paris" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <a href="#" class="place-buy-btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
 
-                        <div class="column-third column place-item">
+                        <div class="column-third margin-top-32 s-col-full column place-item">
                             <img src="./assests/image/san.jpg" alt="San Francisco" class="place-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-decription">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="#" class="place-buy-btn">Buy Tickets</a>
+                                <a href="#" class="place-buy-btn s-full-width">Buy Tickets</a>
                             </div>
                         </div>
                         <!-- Kỹ thuật clear -->
@@ -136,21 +147,23 @@
                 <!-- Dung lai -->
                 <h2 class="section-heading">CONTACT</h2>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
-                <div class="row contact-content">
-                    <div class="column column-half contact-info">
+                <div class="row contact-content ">
+                    <div class="column column-half  contact-info s-col-full">
                         <p><i class="ti-location-pin"></i>Chicago, US</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 151515</p>
-                        <p><i class="ti-email"></i>Email: mail@mail.com</p>
+                        <p><i class="ti-mobile"></i>
+                            <a href="tel:+ +00 151515"></a> Phone: +00 151515</p>
+                        <p><i class="ti-email"></i>
+                            <a href="mailto:mail@mail.com"></a> Email: mail@mail.com</p>
                     </div>
-                    <div class="column column-half contact-form">
+                    <div class="column column-half contact-form s-col-full ">
                         <form action="">
                             <div class="row ">
-                                <div class="column column-half">
+                                <div class="column column-half s-col-full">
                                     <input type="text" name="" placeholder="Name" required id="" class="form-control">
                                 </div>
 
-                                <div class="column column-half">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                <div class="column column-half s-col-full s-mt-8">
+                                    <input type="email" name="" placeholder="Email" required id="" class="form-control ">
                                 </div>
                                 <!-- Element row:after sẽ thêm vào đây -->
                             </div>
@@ -159,7 +172,7 @@
                                     <input type="text" name="" placeholder="Message" required id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="form-submit-btn margin-top-16" type="submit" value="SEND">
+                            <input class="form-submit-btn margin-top-16 s-full-width" type="submit" value="SEND">
                         </form>
                     </div>
                 </div>
@@ -185,6 +198,44 @@
         </div>
 
     </div>
+    <script>
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        //Lay chieu cao cua header
+        var headerHeight = header.clientHeight;
+        //Dong mo mobile-menu
+        mobileMenu.onclick = function() {
+                var isClose = header.clientHeight === headerHeight;
+                if (isClose) {
+                    /*set css*/
+                    header.style.height = 'auto';
+                } else {
+                    header.style.height = null;
+                }
+
+            }
+            //Tu dong dong khi chon menu
+        var menuItems = document.querySelectorAll('#nav li a[href *= "#"]');
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function(event) {
+                //console.log(this)
+                //Khi đứng tại một thẻ, thì this chính là thẻ mà đang được sử dụng
+
+                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav');
+
+                if (isParentMenu) {
+                    //Xử lí lỗi của More 
+                    event.preventDefault();
+                } else {
+                    //nếu mà không phải cha thì ẩn menu đi
+                    //ẩn menu
+                    header.style.height = null;
+                }
+
+            }
+        }
+    </script>
 </body>
 
 </html>
